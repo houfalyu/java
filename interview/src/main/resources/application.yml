@@ -1,0 +1,26 @@
+server:
+  port: 80
+
+#spring dataSource Info
+#spring JSON Info
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: rootroot
+    url: jdbc:mysql:///zhengzhou
+    username: root
+  jackson:
+    default-property-inclusion: non_null
+
+#logger Info
+#Mybatis Info
+mybatis:
+  type-aliases-package: com.houfalyu.entity
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+logging:
+  level:
+    com:
+      houfalyu:
+        mapper: debug
